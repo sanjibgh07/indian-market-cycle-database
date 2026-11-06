@@ -15,12 +15,13 @@ jobs:
           git clone --depth 1 https://github.com/technovusin/nifty50-historical-data.git /tmp/nifty
           git clone --depth 1 https://github.com/technovusin/sensex-historical-data.git /tmp/sensex
           git clone --depth 1 https://github.com/kalilurrahman/NIFTY_50_STOCK_DATA.git /tmp/nifty-stocks
+          rm -rf /tmp/nifty/.git /tmp/sensex/.git /tmp/nifty-stocks/.git
           mkdir -p index/indian-index/raw/github stocks/top-50/raw/github sources
           rm -rf index/indian-index/raw/github/nifty50-historical-data index/indian-index/raw/github/sensex-historical-data stocks/top-50/raw/github/NIFTY_50_STOCK_DATA
           cp -a /tmp/nifty index/indian-index/raw/github/nifty50-historical-data
           cp -a /tmp/sensex index/indian-index/raw/github/sensex-historical-data
           cp -a /tmp/nifty-stocks stocks/top-50/raw/github/NIFTY_50_STOCK_DATA
-          { echo retrieved_utc: $(date -u +%FT%TZ); echo nifty50_commit: $(git -C /tmp/nifty rev-parse HEAD); echo sensex_commit: $(git -C /tmp/sensex rev-parse HEAD); echo nifty50_stocks_commit: $(git -C /tmp/nifty-stocks rev-parse HEAD); } > sources/LATEST_SNAPSHOT.txt
+          { echo retrieved_utc: $(date -u +%FT%TZ); echo nifty50_commit: source-snapshot; echo sensex_commit: source-snapshot; echo nifty50_stocks_commit: source-snapshot; } > sources/LATEST_SNAPSHOT.txt
           find index/indian-index/raw/github stocks/top-50/raw/github -type f -print0 | sort -z | xargs -0 sha256sum > sources/SHA256SUMS.txt
       - name: Commit source-preserving snapshots
         run: |
@@ -29,4 +30,3 @@ jobs:
           git add index/indian-index/raw stocks/top-50/raw sources/LATEST_SNAPSHOT.txt sources/SHA256SUMS.txt
           git diff --cached --quiet || git commit -m 'Sync verified public market dataset snapshots'
           git push
-
