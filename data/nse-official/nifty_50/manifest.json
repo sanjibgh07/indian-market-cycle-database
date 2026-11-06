@@ -1,0 +1,341 @@
+{
+  "index": "NIFTY 50",
+  "requested_from": "1990-07-03",
+  "requested_to": "2026-11-06",
+  "rows_written": 2590,
+  "windows": [
+    {
+      "from": "1990-07-03",
+      "to": "1991-07-02",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19900703_19910702.json",
+      "response_sha256": "d0bd50440602dfc7039be0f307ae73779e443d5c5c7a4756d34b47a3661bd0bc",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=03-07-1990&to=02-07-1991",
+      "retrieved_at": "2026-11-06T11:39:39Z"
+    },
+    {
+      "from": "1991-07-03",
+      "to": "1992-07-01",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19910703_19920701.json",
+      "response_sha256": "e40255c9871475caeba839d8e9570cae70f9fe6ed1cb594762648997f9f341c7",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=03-07-1991&to=01-07-1992",
+      "retrieved_at": "2026-11-06T11:39:40Z"
+    },
+    {
+      "from": "1992-07-02",
+      "to": "1993-07-01",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19920702_19930701.json",
+      "response_sha256": "fbc66737751da91c7bf79a8ac2bb3eec1691a62cdaa0c99fe6f0c0a124184241",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=02-07-1992&to=01-07-1993",
+      "retrieved_at": "2026-11-06T11:39:42Z"
+    },
+    {
+      "from": "1993-07-02",
+      "to": "1994-07-01",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19930702_19940701.json",
+      "response_sha256": "76a5ba168a4b2539b6b9be1663c32dca2ed754cc8df4d9896f9d2479aa4869f8",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=02-07-1993&to=01-07-1994",
+      "retrieved_at": "2026-11-06T11:39:43Z"
+    },
+    {
+      "from": "1994-07-02",
+      "to": "1995-07-01",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19940702_19950701.json",
+      "response_sha256": "0940175611494ef9ffe57ef5628ca70b11bcd409a861bf22a9327ead04edf882",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=02-07-1994&to=01-07-1995",
+      "retrieved_at": "2026-11-06T11:39:45Z"
+    },
+    {
+      "from": "1995-07-02",
+      "to": "1996-06-30",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19950702_19960630.json",
+      "response_sha256": "a0e156cc65e1c25d486b2c60e4cf00f9a4bf9ccad97ae678dfdd07f6b0dfa5fb",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=02-07-1995&to=30-06-1996",
+      "retrieved_at": "2026-11-06T11:39:46Z"
+    },
+    {
+      "from": "1996-07-01",
+      "to": "1997-06-30",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19960701_19970630.json",
+      "response_sha256": "143c8dd2362f56faffdebb2db61a56eee21c4513a526e6c336accb9732341d1a",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=01-07-1996&to=30-06-1997",
+      "retrieved_at": "2026-11-06T11:39:47Z"
+    },
+    {
+      "from": "1997-07-01",
+      "to": "1998-06-30",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19970701_19980630.json",
+      "response_sha256": "07a7befb1a43e8a3d707d9777b2297a54a914b7b9b7ddbfee1729473627a58ff",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=01-07-1997&to=30-06-1998",
+      "retrieved_at": "2026-11-06T11:39:49Z"
+    },
+    {
+      "from": "1998-07-01",
+      "to": "1999-06-30",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19980701_19990630.json",
+      "response_sha256": "0ba90f087881c37fa551a7de29c8a8b3264d3cf8b94bc30a79b51af045e677a5",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=01-07-1998&to=30-06-1999",
+      "retrieved_at": "2026-11-06T11:39:50Z"
+    },
+    {
+      "from": "1999-07-01",
+      "to": "2000-06-29",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/19990701_20000629.json",
+      "response_sha256": "82c3fa214892ec891d5787a287bee74473b978b569b1fa6fc4a88f714324e5be",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=01-07-1999&to=29-06-2000",
+      "retrieved_at": "2026-11-06T11:39:51Z"
+    },
+    {
+      "from": "2000-06-30",
+      "to": "2001-06-29",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20000630_20010629.json",
+      "response_sha256": "29e49c690fe9a2941e44aac0f0878109c623c7378e115c246404b366559f9e29",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=30-06-2000&to=29-06-2001",
+      "retrieved_at": "2026-11-06T11:39:53Z"
+    },
+    {
+      "from": "2001-06-30",
+      "to": "2002-06-29",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20010630_20020629.json",
+      "response_sha256": "7891e79059958b9d4401f99a16442a21430a7a9737efa77fe7df1f5ab549a062",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=30-06-2001&to=29-06-2002",
+      "retrieved_at": "2026-11-06T11:39:54Z"
+    },
+    {
+      "from": "2002-06-30",
+      "to": "2003-06-29",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20020630_20030629.json",
+      "response_sha256": "dbef16ab615c6f150a6908d6239afae3c4d5ca120689bea8141151bf586710a0",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=30-06-2002&to=29-06-2003",
+      "retrieved_at": "2026-11-06T11:39:56Z"
+    },
+    {
+      "from": "2003-06-30",
+      "to": "2004-06-28",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20030630_20040628.json",
+      "response_sha256": "cea91ff6ebcbc6deca0523bd43e8caccfe2e17062c367510fc0d76d3b719115a",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=30-06-2003&to=28-06-2004",
+      "retrieved_at": "2026-11-06T11:39:57Z"
+    },
+    {
+      "from": "2004-06-29",
+      "to": "2005-06-28",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20040629_20050628.json",
+      "response_sha256": "7f84bc29e8a2e1c1d8bf096e43753c951f03e31e52230667696a4666dd2acaa1",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=29-06-2004&to=28-06-2005",
+      "retrieved_at": "2026-11-06T11:39:58Z"
+    },
+    {
+      "from": "2005-06-29",
+      "to": "2006-06-28",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20050629_20060628.json",
+      "response_sha256": "24ddd9f8453a1d234954520c09047b058ec913d1119176375d13924822959cbe",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=29-06-2005&to=28-06-2006",
+      "retrieved_at": "2026-11-06T11:40:00Z"
+    },
+    {
+      "from": "2006-06-29",
+      "to": "2007-06-28",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20060629_20070628.json",
+      "response_sha256": "a975a52ddc6c45f1e05b41e940fb6593cc680fddfe28e1e34cfa0c6b93e985c8",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=29-06-2006&to=28-06-2007",
+      "retrieved_at": "2026-11-06T11:40:01Z"
+    },
+    {
+      "from": "2007-06-29",
+      "to": "2008-06-27",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20070629_20080627.json",
+      "response_sha256": "2c94b5d493d66e47de1442c02967f6cd988cff345332cfab42c5d8eefae00e57",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=29-06-2007&to=27-06-2008",
+      "retrieved_at": "2026-11-06T11:40:02Z"
+    },
+    {
+      "from": "2008-06-28",
+      "to": "2009-06-27",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20080628_20090627.json",
+      "response_sha256": "6bf3bcaeb10c2a156ba2ce1ca4b20add4c6c345572a0e4ae119521070d53aed1",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=28-06-2008&to=27-06-2009",
+      "retrieved_at": "2026-11-06T11:40:04Z"
+    },
+    {
+      "from": "2009-06-28",
+      "to": "2010-06-27",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20090628_20100627.json",
+      "response_sha256": "01c1be551f681021fc28e4931516c1a97b54f4cf1b0f42ac49ac65bedad76b89",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=28-06-2009&to=27-06-2010",
+      "retrieved_at": "2026-11-06T11:40:05Z"
+    },
+    {
+      "from": "2010-06-28",
+      "to": "2011-06-27",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20100628_20110627.json",
+      "response_sha256": "cf32fac9771bff9702c89a9466043e00dae5146fbf443495fbf0e3874fcdf486",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=28-06-2010&to=27-06-2011",
+      "retrieved_at": "2026-11-06T11:40:06Z"
+    },
+    {
+      "from": "2011-06-28",
+      "to": "2012-06-26",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20110628_20120626.json",
+      "response_sha256": "bbecd58caa73a5420d5ae30b3dc00573acf6ae68f1c8941f347d7c96c97aedb0",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=28-06-2011&to=26-06-2012",
+      "retrieved_at": "2026-11-06T11:40:08Z"
+    },
+    {
+      "from": "2012-06-27",
+      "to": "2013-06-26",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20120627_20130626.json",
+      "response_sha256": "382fe9ef216d0bb65076e52019677ff9a308a7d94366ea22588c63d74d5a0f8b",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=27-06-2012&to=26-06-2013",
+      "retrieved_at": "2026-11-06T11:40:09Z"
+    },
+    {
+      "from": "2013-06-27",
+      "to": "2014-06-26",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20130627_20140626.json",
+      "response_sha256": "fa0b089326b612f06e8d134e25ca9ae1b8b89a89328e6b3d583ced1396d1f225",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=27-06-2013&to=26-06-2014",
+      "retrieved_at": "2026-11-06T11:40:10Z"
+    },
+    {
+      "from": "2014-06-27",
+      "to": "2015-06-26",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20140627_20150626.json",
+      "response_sha256": "6e3eb5b0ef3601d123ceba4466bcea411f5499d1f27bf9ce566c76b8422ee1cd",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=27-06-2014&to=26-06-2015",
+      "retrieved_at": "2026-11-06T11:40:12Z"
+    },
+    {
+      "from": "2015-06-27",
+      "to": "2016-06-25",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20150627_20160625.json",
+      "response_sha256": "ca018eb8389f8609366244425b142d5f453e39e46f031df1453033ade5beb7ea",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=27-06-2015&to=25-06-2016",
+      "retrieved_at": "2026-11-06T11:40:13Z"
+    },
+    {
+      "from": "2016-06-26",
+      "to": "2017-06-25",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20160626_20170625.json",
+      "response_sha256": "4089abff4c69f99e9f559b45c85ca3165d2a8126623f75b7f7f2bbe76d67413e",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=26-06-2016&to=25-06-2017",
+      "retrieved_at": "2026-11-06T11:40:15Z"
+    },
+    {
+      "from": "2017-06-26",
+      "to": "2018-06-25",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20170626_20180625.json",
+      "response_sha256": "c9ead7726c75e84f9454d466467467501b72ec51dd124b1b7cd0598cab40e5f0",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=26-06-2017&to=25-06-2018",
+      "retrieved_at": "2026-11-06T11:40:16Z"
+    },
+    {
+      "from": "2018-06-26",
+      "to": "2019-06-25",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20180626_20190625.json",
+      "response_sha256": "c58cd13a92f658bc86ffd82f84e06175dccadb33765547c3e0441a731fd5a641",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=26-06-2018&to=25-06-2019",
+      "retrieved_at": "2026-11-06T11:40:18Z"
+    },
+    {
+      "from": "2019-06-26",
+      "to": "2020-06-24",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20190626_20200624.json",
+      "response_sha256": "8251f420e5c3ef470a6a9a4d506257147ac5865abb932f0da13ef17b5847be57",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=26-06-2019&to=24-06-2020",
+      "retrieved_at": "2026-11-06T11:40:19Z"
+    },
+    {
+      "from": "2020-06-25",
+      "to": "2021-06-24",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20200625_20210624.json",
+      "response_sha256": "adbac2c640d013c472edc52b1f76b967fb67b0fa1d6ef9d1bab680cf36743445",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=25-06-2020&to=24-06-2021",
+      "retrieved_at": "2026-11-06T11:40:20Z"
+    },
+    {
+      "from": "2021-06-25",
+      "to": "2022-06-24",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20210625_20220624.json",
+      "response_sha256": "f10aa76d932cc1682c7b16147390a96cbec9bc58226c9c0962067de807ff47ce",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=25-06-2021&to=24-06-2022",
+      "retrieved_at": "2026-11-06T11:40:22Z"
+    },
+    {
+      "from": "2022-06-25",
+      "to": "2023-06-24",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20220625_20230624.json",
+      "response_sha256": "b4bbe9e665dea29a92f87922ff95e1f2ee3c6d7fa7311d07dbe4bf8309e70dd4",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=25-06-2022&to=24-06-2023",
+      "retrieved_at": "2026-11-06T11:40:23Z"
+    },
+    {
+      "from": "2023-06-25",
+      "to": "2024-06-23",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20230625_20240623.json",
+      "response_sha256": "2f964d6f86e542f09620171f80a66f6471fbd9a31ae4ef39a76709eeee57e457",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=25-06-2023&to=23-06-2024",
+      "retrieved_at": "2026-11-06T11:40:25Z"
+    },
+    {
+      "from": "2024-06-24",
+      "to": "2025-06-23",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20240624_20250623.json",
+      "response_sha256": "b032d1bc442f7bbe4cb14c223902cf11cd194cc3bc9d8cd5b15998017c6efd5d",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=24-06-2024&to=23-06-2025",
+      "retrieved_at": "2026-11-06T11:40:26Z"
+    },
+    {
+      "from": "2025-06-24",
+      "to": "2026-06-23",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20250624_20260623.json",
+      "response_sha256": "86fd77364062ae6287cadf69692864647ad8fa78faa1cbdc3d8abc795a1a8ef0",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=24-06-2025&to=23-06-2026",
+      "retrieved_at": "2026-11-06T11:40:27Z"
+    },
+    {
+      "from": "2026-06-24",
+      "to": "2026-11-06",
+      "rows_returned": 70,
+      "raw_file": "data/nse-official/nifty_50/raw_json/20260624_20261106.json",
+      "response_sha256": "2fd8839eb431cfb98a90fe84e876bc27210b7db2fb3bdcaab880dd36499d84bb",
+      "source_url": "https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY+50&from=24-06-2026&to=06-11-2026",
+      "retrieved_at": "2026-11-06T11:40:29Z"
+    }
+  ]
+}
