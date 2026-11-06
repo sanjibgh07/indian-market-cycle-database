@@ -1,0 +1,37 @@
+maxAge,86400
+priceHint,2
+previousClose,20133.15
+open,20194.1
+dayLow,20183.7
+dayHigh,20291.55
+regularMarketPreviousClose,20133.15
+regularMarketOpen,20194.1
+regularMarketDayLow,20183.7
+regularMarketDayHigh,20291.55
+volume,0
+regularMarketVolume,0
+averageVolume,237230
+averageVolume10days,232420
+averageDailyVolume10Day,232420
+bid,0.0
+ask,0.0
+bidSize,0
+askSize,0
+fiftyTwoWeekLow,16828.35
+fiftyTwoWeekHigh,20291.55
+fiftyDayAverage,19592.541
+twoHundredDayAverage,18808.412
+currency,INR
+exchange,NSI
+quoteType,INDEX
+symbol,^NSEI
+underlyingSymbol,^NSEI
+shortName,NIFTY 50
+longName,NIFTY 50
+firstTradeDateEpochUtc,1190000700
+timeZoneFullName,Asia/Kolkata
+timeZoneShortName,IST
+uuid,9a3680d6-8f20-3f84-8cd3-66d847143a00
+messageBoardId,finmb_INDEXNSEI
+gmtOffSetMilliseconds,19800000
+trailingPegRatio,
