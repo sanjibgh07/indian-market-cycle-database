@@ -1,4 +1,4 @@
-retrieved_utc: 2026-11-06T06:41:06Z
-nifty50_commit: 6158c8ae89538e6bdcebcde20d27c2f46aeb03d8
-sensex_commit: f1116742b9d073b0543fb67dabd461a81075c41c
+retrieved_utc: 2026-11-08T10:42:41Z
+nifty50_commit: 6eb58d96bd2c963445b8ce0840b1d1a37f8ecff3
+sensex_commit: c8fa227b9075c8adee5333ff1c351cc102eb56c3
 nifty50_stocks_commit: 508787e1f8e07e710e74a58bf6d43f5958fbf48e
