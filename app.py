@@ -210,7 +210,7 @@ def render_sidebar() -> None:
 
         st.subheader("Market master")
         master_path = SETTINGS.master_db_path
-        if master_path.exists():
+        if master_path.exists() and master_path.stat().st_size > 100_000:
             st.success(f"{master_path.name}")
             st.caption(f"{master_path.stat().st_size / 1e6:.1f} MB — the pipeline reads prices from here (no API).")
         else:
@@ -225,7 +225,7 @@ def render_sidebar() -> None:
             f"Status: {update_status.get('status', 'unknown')} · "
             f"Finished: {update_status.get('finished_ist', 'never')}"
         )
-        if master_path.exists():
+        if master_path.exists() and master_path.stat().st_size > 100_000:
             if st.button("Refresh data now", use_container_width=True):
                 with st.spinner("Fetching new market bars and rebuilding the ephemeris..."):
                     try:
