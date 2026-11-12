@@ -182,8 +182,12 @@ def render_sidebar() -> None:
                 hide_index=True,
                 width="stretch",
             )
-        except Exception as exc:  # pragma: no cover - UI resilience
-            st.warning(f"Database unavailable: {exc}")
+        except Exception as exc:  # pragma: no cover - hosted snapshot has no runtime DB
+            st.info(
+                "Hosted snapshot mode: the dashboard is reading the committed CSV " 
+                "datasets. The local SQLite runtime database is not bundled with " 
+                "the public deployment."
+            )
 
         st.subheader("Last refresh")
         try:
@@ -198,8 +202,11 @@ def render_sidebar() -> None:
                 )
             else:
                 st.info("No pipeline run recorded yet.")
-        except Exception as exc:  # pragma: no cover - UI resilience
-            st.warning(f"Pipeline history unavailable: {exc}")
+        except Exception as exc:  # pragma: no cover - hosted snapshot has no runtime DB
+            st.info(
+                "No hosted pipeline history is available. The validation report " 
+                "above describes the committed build."
+            )
 
         st.subheader("Market master")
         master_path = SETTINGS.master_db_path
@@ -207,7 +214,10 @@ def render_sidebar() -> None:
             st.success(f"{master_path.name}")
             st.caption(f"{master_path.stat().st_size / 1e6:.1f} MB — the pipeline reads prices from here (no API).")
         else:
-            st.warning("Market master database not found.")
+            st.info(
+                "Hosted snapshot mode: the market-master SQLite file is kept local " 
+                "and is not uploaded to the public app."
+            )
 
         st.subheader("Automatic updates")
         update_status = read_status()
@@ -215,20 +225,26 @@ def render_sidebar() -> None:
             f"Status: {update_status.get('status', 'unknown')} · "
             f"Finished: {update_status.get('finished_ist', 'never')}"
         )
-        if st.button("Refresh data now", use_container_width=True):
-            with st.spinner("Fetching new market bars and rebuilding the ephemeris..."):
-                try:
-                    payload = run_update(rebuild=True)
-                    st.cache_data.clear()
-                    if payload.get("alignment_passed") is False:
-                        st.error("Refresh finished, but alignment validation failed. Check data/update_status.json.")
-                    elif payload.get("status") == "partial":
-                        st.warning("Refresh completed partially. Unconfigured or unavailable feeds are shown in the status file.")
-                    else:
-                        st.success("Refresh completed successfully.")
-                    st.rerun()
-                except Exception as exc:  # pragma: no cover - UI resilience
-                    st.error(f"Refresh failed: {exc}")
+        if master_path.exists():
+            if st.button("Refresh data now", use_container_width=True):
+                with st.spinner("Fetching new market bars and rebuilding the ephemeris..."):
+                    try:
+                        payload = run_update(rebuild=True)
+                        st.cache_data.clear()
+                        if payload.get("alignment_passed") is False:
+                            st.error("Refresh finished, but alignment validation failed. Check data/update_status.json.")
+                        elif payload.get("status") == "partial":
+                            st.warning("Refresh completed partially. Unconfigured or unavailable feeds are shown in the status file.")
+                        else:
+                            st.success("Refresh completed successfully.")
+                        st.rerun()
+                    except Exception as exc:  # pragma: no cover - UI resilience
+                        st.error(f"Refresh failed: {exc}")
+        else:
+            st.info(
+                "Automatic refresh is configured for the local Windows installation. "
+                "This public deployment is read-only; refresh locally to rebuild data."
+            )
         st.caption("The Windows task can run this same update automatically every day.")
 
         st.divider()
