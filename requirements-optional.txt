@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------------------
+# Celestial Indices - OPTIONAL extras
+#
+#   pip install --index-url https://pypi.org/simple -r requirements-optional.txt
+#
+# None of these are imported by any module in the project.  They are kept
+# here so that switching the pipeline to a live data source or to PostgreSQL
+# is a one-liner rather than a hunt.
+#
+# Install them ONLY if you need them - `psycopg2-binary` in particular can
+# fail to build on a brand-new Python release, and the default build does
+# not want it.
+# ---------------------------------------------------------------------------
+
+# --- PostgreSQL driver (only for DATABASE_URL=postgresql+psycopg2://...) ----
+psycopg2-binary>=2.9
+
+# --- Legacy live-NSE adapter ----------------------------------------------
+# The shipped build reads prices from data/INDIAN_MARKET_MASTER_PRE_EPHEMERIS.sqlite
+# and makes NO network calls.  This is only for pointing the pipeline at a
+# live source instead.
+jugaad-data>=0.28
+requests>=2.31

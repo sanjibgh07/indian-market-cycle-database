@@ -1,0 +1,2811 @@
+{
+  "title": "NSE Trading Holidays (2000-2026)",
+  "description": "Reconciled NSE/BSE trading-holiday calendar. Dates are taken from the Zipline/quantopian XBOM trading calendar and cross-checked against transcriptions of official NSE circulars (marketholidays.in) for 2023-2026, the kartikkasat/nse-calendar-data dataset, the vacanza/holidays NSE calendar, and jugaad-py/master-data.",
+  "reconciliation": "Every date was validated against observed index sessions: a date with a genuine full-day session was removed from the holiday set; a date with only a Muhurat one-hour session remains a holiday and is flagged has_special_session=true; zero-volume carry-forward rows are treated as artifacts and the date stays a holiday.",
+  "sources": [
+    "Zipline/quantopian exchange_calendar_xbom (via jugaad-py/jugaad-data)",
+    "marketholidays.in/api/holidays (transcribed from official NSE circulars)",
+    "github.com/kartikkasat/nse-calendar-data",
+    "vacanza/holidays -> NationalStockExchangeOfIndia",
+    "github.com/jugaad-py/master-data -> holidays/holidays.csv",
+    "Observed index sessions (NSE/BSE daily OHLCV)"
+  ],
+  "built_at": "2026-11-09T18:48:25+00:00",
+  "date_range": {
+    "start": "2000-01-01",
+    "end": "2026-12-31"
+  },
+  "last_observed_session": "2026-11-06",
+  "counts": {
+    "total": 394,
+    "weekday_holidays": 375,
+    "weekend_holidays": 19,
+    "with_special_session": 3
+  },
+  "notes": [
+    "Muhurat-trading dates (e.g. 2022-10-24, 2024-11-01, 2025-10-21) are official NSE holidays that hosted a one-hour special session. They are flagged has_special_session and are excluded from the index master.",
+    "NSE revoked the 2013-11-14 Muharram holiday by circular: 2013-11-14 was a trading day and 2013-11-15 is the holiday.",
+    "The 2023 Bakri Id holiday was moved from 28-Jun to 29-Jun-2023 (NSE/CMTR/57285); 28-Jun-2023 was a trading day.",
+    "Dates in `missing_sessions` are genuine trading days for which no index published a bar; the pipeline logs a warning and leaves them out rather than inventing prices."
+  ],
+  "special_session_dates": [
+    "2022-10-24",
+    "2024-11-01",
+    "2025-10-21"
+  ],
+  "artifact_dates": [
+    "2000-01-26"
+  ],
+  "rejected_as_trading_days": [
+    "2020-07-31"
+  ],
+  "missing_sessions": [
+    "2000-10-26",
+    "2002-01-01",
+    "2003-01-01",
+    "2009-01-01",
+    "2012-10-26",
+    "2019-02-13",
+    "2019-03-29"
+  ],
+  "holidays": [
+    {
+      "date": "2000-01-26",
+      "day": "Wednesday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-03-17",
+      "day": "Friday",
+      "reason": "Holi / Dhuleti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-03-20",
+      "day": "Monday",
+      "reason": "Exchange Holiday (Holi extended)",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-04-14",
+      "day": "Friday",
+      "reason": "Good Friday / Dr. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-04-21",
+      "day": "Friday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-05-01",
+      "day": "Monday",
+      "reason": "Maharashtra Day / Labour Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-08-15",
+      "day": "Tuesday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-09-01",
+      "day": "Friday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-10-02",
+      "day": "Monday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2000-12-25",
+      "day": "Monday",
+      "reason": "Christmas",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-01-01",
+      "day": "Monday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-01-26",
+      "day": "Friday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-03-06",
+      "day": "Tuesday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-04-05",
+      "day": "Thursday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-04-13",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-05-01",
+      "day": "Tuesday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-08-15",
+      "day": "Wednesday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-08-22",
+      "day": "Wednesday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-10-02",
+      "day": "Tuesday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-10-26",
+      "day": "Friday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-11-16",
+      "day": "Friday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-11-30",
+      "day": "Friday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-12-17",
+      "day": "Monday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2001-12-25",
+      "day": "Tuesday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-03-25",
+      "day": "Monday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-03-29",
+      "day": "Friday",
+      "reason": "Good Friday; Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-05-01",
+      "day": "Wednesday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-08-15",
+      "day": "Thursday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-09-10",
+      "day": "Tuesday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-10-02",
+      "day": "Wednesday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-10-15",
+      "day": "Tuesday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-11-06",
+      "day": "Wednesday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-11-19",
+      "day": "Tuesday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2002-12-25",
+      "day": "Wednesday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-02-13",
+      "day": "Thursday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-03-14",
+      "day": "Friday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-03-18",
+      "day": "Tuesday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-04-14",
+      "day": "Monday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-04-18",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-05-01",
+      "day": "Thursday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-08-15",
+      "day": "Friday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-10-02",
+      "day": "Thursday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-11-26",
+      "day": "Wednesday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2003-12-25",
+      "day": "Thursday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-01-01",
+      "day": "Thursday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-01-26",
+      "day": "Monday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-02-02",
+      "day": "Monday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-03-02",
+      "day": "Tuesday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-04-09",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-04-14",
+      "day": "Wednesday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-04-26",
+      "day": "Monday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-10-13",
+      "day": "Wednesday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-10-22",
+      "day": "Friday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-11-15",
+      "day": "Monday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2004-11-26",
+      "day": "Friday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-01-21",
+      "day": "Friday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-01-26",
+      "day": "Wednesday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-03-25",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-04-14",
+      "day": "Thursday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-07-28",
+      "day": "Thursday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-08-15",
+      "day": "Monday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-09-07",
+      "day": "Wednesday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-10-12",
+      "day": "Wednesday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-11-01",
+      "day": "Tuesday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-11-03",
+      "day": "Thursday",
+      "reason": "Bhai Dooj",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-11-04",
+      "day": "Friday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2005-11-15",
+      "day": "Tuesday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-01-11",
+      "day": "Wednesday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-01-26",
+      "day": "Thursday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-02-09",
+      "day": "Thursday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-03-15",
+      "day": "Wednesday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-04-06",
+      "day": "Thursday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-04-11",
+      "day": "Tuesday",
+      "reason": "Mahavir Jayanti; Prophet's Birthday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-04-14",
+      "day": "Friday",
+      "reason": "Dr. B. R. Ambedkar Jayanti; Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-05-01",
+      "day": "Monday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-08-15",
+      "day": "Tuesday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-10-02",
+      "day": "Monday",
+      "reason": "Dussehra; Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-10-24",
+      "day": "Tuesday",
+      "reason": "Bhai Dooj",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-10-25",
+      "day": "Wednesday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2006-12-25",
+      "day": "Monday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-01-01",
+      "day": "Monday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-01-26",
+      "day": "Friday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-01-30",
+      "day": "Tuesday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-02-16",
+      "day": "Friday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-03-27",
+      "day": "Tuesday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-04-06",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-05-01",
+      "day": "Tuesday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-05-02",
+      "day": "Wednesday",
+      "reason": "Buddha Purnima",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-08-15",
+      "day": "Wednesday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-10-02",
+      "day": "Tuesday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-11-09",
+      "day": "Friday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-12-21",
+      "day": "Friday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2007-12-25",
+      "day": "Tuesday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-03-06",
+      "day": "Thursday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-03-20",
+      "day": "Thursday",
+      "reason": "Prophet's Birthday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-03-21",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-04-14",
+      "day": "Monday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-04-18",
+      "day": "Friday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-05-01",
+      "day": "Thursday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-05-19",
+      "day": "Monday",
+      "reason": "Buddha Purnima",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-08-15",
+      "day": "Friday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-09-03",
+      "day": "Wednesday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-10-02",
+      "day": "Thursday",
+      "reason": "Eid al-Fitr; Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-10-09",
+      "day": "Thursday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-10-28",
+      "day": "Tuesday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-10-30",
+      "day": "Thursday",
+      "reason": "Bhai Dooj",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-11-13",
+      "day": "Thursday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-11-27",
+      "day": "Thursday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-12-09",
+      "day": "Tuesday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2008-12-25",
+      "day": "Thursday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-01-08",
+      "day": "Thursday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-01-26",
+      "day": "Monday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-02-23",
+      "day": "Monday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-03-10",
+      "day": "Tuesday",
+      "reason": "Prophet's Birthday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-03-11",
+      "day": "Wednesday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-04-03",
+      "day": "Friday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-04-07",
+      "day": "Tuesday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-04-10",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-04-14",
+      "day": "Tuesday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-04-30",
+      "day": "Thursday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-05-01",
+      "day": "Friday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-09-21",
+      "day": "Monday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-09-28",
+      "day": "Monday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-10-02",
+      "day": "Friday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-10-13",
+      "day": "Tuesday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-10-19",
+      "day": "Monday",
+      "reason": "Bhai Dooj",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-11-02",
+      "day": "Monday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-12-25",
+      "day": "Friday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2009-12-28",
+      "day": "Monday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-01-01",
+      "day": "Friday",
+      "reason": "New Year's Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-01-26",
+      "day": "Tuesday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-02-12",
+      "day": "Friday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-03-01",
+      "day": "Monday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-03-24",
+      "day": "Wednesday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-04-02",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-04-14",
+      "day": "Wednesday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-09-10",
+      "day": "Friday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-11-05",
+      "day": "Friday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-11-17",
+      "day": "Wednesday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2010-12-17",
+      "day": "Friday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-01-26",
+      "day": "Wednesday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-03-02",
+      "day": "Wednesday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-04-12",
+      "day": "Tuesday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-04-14",
+      "day": "Thursday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-04-22",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-08-15",
+      "day": "Monday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-08-31",
+      "day": "Wednesday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-09-01",
+      "day": "Thursday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-10-06",
+      "day": "Thursday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-10-26",
+      "day": "Wednesday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-10-27",
+      "day": "Thursday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-11-07",
+      "day": "Monday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-11-10",
+      "day": "Thursday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2011-12-06",
+      "day": "Tuesday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-01-26",
+      "day": "Thursday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-02-20",
+      "day": "Monday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-03-08",
+      "day": "Thursday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-04-05",
+      "day": "Thursday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-04-06",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-05-01",
+      "day": "Tuesday",
+      "reason": "May Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-08-15",
+      "day": "Wednesday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-08-20",
+      "day": "Monday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-09-19",
+      "day": "Wednesday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-10-02",
+      "day": "Tuesday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-10-24",
+      "day": "Wednesday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-11-13",
+      "day": "Tuesday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-11-14",
+      "day": "Wednesday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-11-28",
+      "day": "Wednesday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2012-12-25",
+      "day": "Tuesday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-03-27",
+      "day": "Wednesday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-03-29",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-04-19",
+      "day": "Friday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-04-24",
+      "day": "Wednesday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-05-01",
+      "day": "Wednesday",
+      "reason": "May Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-08-09",
+      "day": "Friday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-08-15",
+      "day": "Thursday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-09-09",
+      "day": "Monday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-10-02",
+      "day": "Wednesday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-10-16",
+      "day": "Wednesday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-11-04",
+      "day": "Monday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-11-15",
+      "day": "Friday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2013-12-25",
+      "day": "Wednesday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-02-27",
+      "day": "Thursday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-03-17",
+      "day": "Monday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-04-08",
+      "day": "Tuesday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-04-14",
+      "day": "Monday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-04-18",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-04-24",
+      "day": "Thursday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-05-01",
+      "day": "Thursday",
+      "reason": "May Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-07-29",
+      "day": "Tuesday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-08-15",
+      "day": "Friday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-08-29",
+      "day": "Friday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-10-02",
+      "day": "Thursday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-10-03",
+      "day": "Friday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-10-06",
+      "day": "Monday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-10-15",
+      "day": "Wednesday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-10-23",
+      "day": "Thursday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-10-24",
+      "day": "Friday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-11-04",
+      "day": "Tuesday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-11-06",
+      "day": "Thursday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2014-12-25",
+      "day": "Thursday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-01-26",
+      "day": "Monday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-02-17",
+      "day": "Tuesday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-03-06",
+      "day": "Friday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-04-02",
+      "day": "Thursday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-04-03",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-04-14",
+      "day": "Tuesday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-05-01",
+      "day": "Friday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-09-17",
+      "day": "Thursday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-09-25",
+      "day": "Friday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-10-02",
+      "day": "Friday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-10-22",
+      "day": "Thursday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-11-11",
+      "day": "Wednesday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-11-12",
+      "day": "Thursday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-11-25",
+      "day": "Wednesday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2015-12-25",
+      "day": "Friday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-01-26",
+      "day": "Tuesday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-03-07",
+      "day": "Monday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-03-24",
+      "day": "Thursday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-03-25",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-04-14",
+      "day": "Thursday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-04-15",
+      "day": "Friday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-04-19",
+      "day": "Tuesday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-07-06",
+      "day": "Wednesday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-08-15",
+      "day": "Monday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-09-05",
+      "day": "Monday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-09-13",
+      "day": "Tuesday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-10-11",
+      "day": "Tuesday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-10-12",
+      "day": "Wednesday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-10-31",
+      "day": "Monday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2016-11-14",
+      "day": "Monday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-01-26",
+      "day": "Thursday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-02-24",
+      "day": "Friday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-03-13",
+      "day": "Monday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-04-04",
+      "day": "Tuesday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-04-14",
+      "day": "Friday",
+      "reason": "Dr. B. R. Ambedkar Jayanti; Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-05-01",
+      "day": "Monday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-06-26",
+      "day": "Monday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-08-15",
+      "day": "Tuesday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-08-25",
+      "day": "Friday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-10-02",
+      "day": "Monday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-10-20",
+      "day": "Friday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2017-12-25",
+      "day": "Monday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-01-26",
+      "day": "Friday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-02-13",
+      "day": "Tuesday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-03-02",
+      "day": "Friday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-03-29",
+      "day": "Thursday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-03-30",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-05-01",
+      "day": "Tuesday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-08-15",
+      "day": "Wednesday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-08-22",
+      "day": "Wednesday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-09-13",
+      "day": "Thursday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-09-20",
+      "day": "Thursday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-10-02",
+      "day": "Tuesday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-10-18",
+      "day": "Thursday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-11-08",
+      "day": "Thursday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-11-23",
+      "day": "Friday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2018-12-25",
+      "day": "Tuesday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-01-26",
+      "day": "Saturday",
+      "reason": "Trading Holiday",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-03-02",
+      "day": "Saturday",
+      "reason": "Trading Holiday",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-03-04",
+      "day": "Monday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-03-21",
+      "day": "Thursday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-04-17",
+      "day": "Wednesday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-04-19",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-04-29",
+      "day": "Monday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-05-01",
+      "day": "Wednesday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-06-05",
+      "day": "Wednesday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-08-12",
+      "day": "Monday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-08-15",
+      "day": "Thursday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-09-02",
+      "day": "Monday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-09-10",
+      "day": "Tuesday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-10-02",
+      "day": "Wednesday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-10-08",
+      "day": "Tuesday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-10-21",
+      "day": "Monday",
+      "reason": "Trading Holiday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-10-28",
+      "day": "Monday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-11-12",
+      "day": "Tuesday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2019-12-25",
+      "day": "Wednesday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-02-21",
+      "day": "Friday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-03-10",
+      "day": "Tuesday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-04-02",
+      "day": "Thursday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-04-06",
+      "day": "Monday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-04-10",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-04-14",
+      "day": "Tuesday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-05-01",
+      "day": "Friday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-05-25",
+      "day": "Monday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-10-02",
+      "day": "Friday",
+      "reason": "Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-11-16",
+      "day": "Monday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-11-30",
+      "day": "Monday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2020-12-25",
+      "day": "Friday",
+      "reason": "Christmas Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-01-26",
+      "day": "Tuesday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-03-11",
+      "day": "Thursday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-03-29",
+      "day": "Monday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-04-02",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-04-14",
+      "day": "Wednesday",
+      "reason": "Dr. B. R. Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-04-21",
+      "day": "Wednesday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-05-13",
+      "day": "Thursday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-07-21",
+      "day": "Wednesday",
+      "reason": "Eid al-Adha",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-08-19",
+      "day": "Thursday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-09-10",
+      "day": "Friday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-10-15",
+      "day": "Friday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-11-05",
+      "day": "Friday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2021-11-19",
+      "day": "Friday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-01-26",
+      "day": "Wednesday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-03-01",
+      "day": "Tuesday",
+      "reason": "Maha Shivaratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-03-18",
+      "day": "Friday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-04-14",
+      "day": "Thursday",
+      "reason": "Dr. B. R. Ambedkar Jayanti; Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-04-15",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-05-03",
+      "day": "Tuesday",
+      "reason": "Eid al-Fitr",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-08-09",
+      "day": "Tuesday",
+      "reason": "Ashura",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-08-15",
+      "day": "Monday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-08-31",
+      "day": "Wednesday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-10-05",
+      "day": "Wednesday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-10-24",
+      "day": "Monday",
+      "reason": "Diwali Laxmi Pujan",
+      "is_weekend": false,
+      "has_special_session": true
+    },
+    {
+      "date": "2022-10-26",
+      "day": "Wednesday",
+      "reason": "Diwali Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2022-11-08",
+      "day": "Tuesday",
+      "reason": "Guru Nanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-01-26",
+      "day": "Thursday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-02-18",
+      "day": "Saturday",
+      "reason": "Mahashivratri",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-03-07",
+      "day": "Tuesday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-03-30",
+      "day": "Thursday",
+      "reason": "Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-04-04",
+      "day": "Tuesday",
+      "reason": "Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-04-07",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-04-14",
+      "day": "Friday",
+      "reason": "Dr. Baba Saheb Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-04-22",
+      "day": "Saturday",
+      "reason": "Id-Ul-Fitr (Ramzan ID)",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-05-01",
+      "day": "Monday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-06-29",
+      "day": "Thursday",
+      "reason": "Bakri Id (moved from 28 June, NSE/CMTR/57285)",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-07-29",
+      "day": "Saturday",
+      "reason": "Moharram",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-08-15",
+      "day": "Tuesday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-09-19",
+      "day": "Tuesday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-10-02",
+      "day": "Monday",
+      "reason": "Mahatma Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-10-24",
+      "day": "Tuesday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-11-12",
+      "day": "Sunday",
+      "reason": "Diwali-Laxmi Pujan (Muhurat trading 6:15-7:15 PM, NSE/CMTR/59124)",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-11-14",
+      "day": "Tuesday",
+      "reason": "Diwali-Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-11-27",
+      "day": "Monday",
+      "reason": "Gurunanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2023-12-25",
+      "day": "Monday",
+      "reason": "Christmas",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-01-22",
+      "day": "Monday",
+      "reason": "Public holiday (Shri Ram Lalla Pran Pratishtha, NSE/CMTR/60338)",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-01-26",
+      "day": "Friday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-03-08",
+      "day": "Friday",
+      "reason": "Mahashivratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-03-25",
+      "day": "Monday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-03-29",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-04-11",
+      "day": "Thursday",
+      "reason": "Id-Ul-Fitr (Ramadan Eid)",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-04-14",
+      "day": "Sunday",
+      "reason": "Dr. Baba Saheb Ambedkar Jayanti",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-04-17",
+      "day": "Wednesday",
+      "reason": "Shri Ram Navmi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-04-21",
+      "day": "Sunday",
+      "reason": "Shri Mahavir Jayanti",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-05-01",
+      "day": "Wednesday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-05-20",
+      "day": "Monday",
+      "reason": "Parliamentary elections in Mumbai (NSE/CMTR/61518)",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-06-17",
+      "day": "Monday",
+      "reason": "Bakri Id",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-07-17",
+      "day": "Wednesday",
+      "reason": "Moharram",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-08-15",
+      "day": "Thursday",
+      "reason": "Independence Day/Parsi New Year",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-09-07",
+      "day": "Saturday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-10-02",
+      "day": "Wednesday",
+      "reason": "Mahatma Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-10-12",
+      "day": "Saturday",
+      "reason": "Dussehra",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-11-01",
+      "day": "Friday",
+      "reason": "Diwali Laxmi Pujan (Muhurat trading 6:00-7:00 PM, NSE/CMTR/64628)",
+      "is_weekend": false,
+      "has_special_session": true
+    },
+    {
+      "date": "2024-11-02",
+      "day": "Saturday",
+      "reason": "Diwali-Balipratipada",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-11-15",
+      "day": "Friday",
+      "reason": "Gurunanak Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-11-20",
+      "day": "Wednesday",
+      "reason": "Maharashtra assembly elections (NSE/CMTR/64960)",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2024-12-25",
+      "day": "Wednesday",
+      "reason": "Christmas",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-01-26",
+      "day": "Sunday",
+      "reason": "Republic Day",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-02-26",
+      "day": "Wednesday",
+      "reason": "Mahashivratri",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-03-14",
+      "day": "Friday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-03-31",
+      "day": "Monday",
+      "reason": "Id-Ul-Fitr (Ramadan Eid)",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-04-06",
+      "day": "Sunday",
+      "reason": "Shri Ram Navami",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-04-10",
+      "day": "Thursday",
+      "reason": "Shri Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-04-14",
+      "day": "Monday",
+      "reason": "Dr. Baba Saheb Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-04-18",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-05-01",
+      "day": "Thursday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-06-07",
+      "day": "Saturday",
+      "reason": "Bakri Id",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-07-06",
+      "day": "Sunday",
+      "reason": "Muharram",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-08-15",
+      "day": "Friday",
+      "reason": "Independence Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-08-27",
+      "day": "Wednesday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-10-02",
+      "day": "Thursday",
+      "reason": "Mahatma Gandhi Jayanti/Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-10-21",
+      "day": "Tuesday",
+      "reason": "Diwali Laxmi Pujan (Muhurat trading 1:45-2:45 PM, NSE/CMTR/70319)",
+      "is_weekend": false,
+      "has_special_session": true
+    },
+    {
+      "date": "2025-10-22",
+      "day": "Wednesday",
+      "reason": "Diwali-Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-11-05",
+      "day": "Wednesday",
+      "reason": "Prakash Gurpurb Sri Guru Nanak Dev",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2025-12-25",
+      "day": "Thursday",
+      "reason": "Christmas",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-01-15",
+      "day": "Thursday",
+      "reason": "Municipal Corporation Election \u2014 Maharashtra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-01-26",
+      "day": "Monday",
+      "reason": "Republic Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-02-15",
+      "day": "Sunday",
+      "reason": "Mahashivratri",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-03-03",
+      "day": "Tuesday",
+      "reason": "Holi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-03-21",
+      "day": "Saturday",
+      "reason": "Id-Ul-Fitr (Ramadan Eid)",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-03-26",
+      "day": "Thursday",
+      "reason": "Shri Ram Navami",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-03-31",
+      "day": "Tuesday",
+      "reason": "Shri Mahavir Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-04-03",
+      "day": "Friday",
+      "reason": "Good Friday",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-04-14",
+      "day": "Tuesday",
+      "reason": "Dr. Baba Saheb Ambedkar Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-05-01",
+      "day": "Friday",
+      "reason": "Maharashtra Day",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-05-28",
+      "day": "Thursday",
+      "reason": "Bakri Id",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-06-26",
+      "day": "Friday",
+      "reason": "Muharram",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-08-15",
+      "day": "Saturday",
+      "reason": "Independence Day",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-09-14",
+      "day": "Monday",
+      "reason": "Ganesh Chaturthi",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-10-02",
+      "day": "Friday",
+      "reason": "Mahatma Gandhi Jayanti",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-10-20",
+      "day": "Tuesday",
+      "reason": "Dussehra",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-11-08",
+      "day": "Sunday",
+      "reason": "Diwali Laxmi Pujan (Muhurat Trading)",
+      "is_weekend": true,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-11-10",
+      "day": "Tuesday",
+      "reason": "Diwali-Balipratipada",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-11-24",
+      "day": "Tuesday",
+      "reason": "Prakash Gurpurb Sri Guru Nanak Dev",
+      "is_weekend": false,
+      "has_special_session": false
+    },
+    {
+      "date": "2026-12-25",
+      "day": "Friday",
+      "reason": "Christmas",
+      "is_weekend": false,
+      "has_special_session": false
+    }
+  ]
+}

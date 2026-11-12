@@ -1,0 +1,122 @@
+==============================================================================
+CELESTIAL INDICES - ALIGNMENT VALIDATION REPORT
+==============================================================================
+Generated at                        : 2026-11-09T23:25:38
+Source                              : SQLite market master (no API)
+Market master                       : /run/csi/mount-root/nas/eab0d61a99b6696edb3d2aff87b585e8/celestial-build/Celestial_Final/data/INDIAN_MARKET_MASTER_PRE_EPHEMERIS.sqlite
+Aligned master rows (date x index)  : 25887
+Unique trading days in aligned set : 6631
+Unique trading days in calendar    : 6647
+Trading days with no published bar : 16
+Daily view rows (one per day)      : 6631
+Index master rows                   : 25887
+Date range                          : 2000-01-03 -> 2026-11-06
+
+------------------------------------------------------------------------------
+MANDATORY CHECKS
+------------------------------------------------------------------------------
+  [PASS] Every aligned date is a calendar trading day
+  [PASS] Zero rows on official holidays
+  [PASS] Zero weekend rows other than retained special sessions
+  [PASS] All special sessions retained in the aligned dataset
+  [PASS] Zero NULLs in OHLC columns
+  [PASS] Zero NULLs in planetary columns
+  [PASS] Zero NULLs in any column
+  [PASS] No duplicated (date, index_name) rows
+  [PASS] Every absent trading day is a documented vendor gap
+  [PASS] Each index has exactly one row per trading day
+  [PASS] Unique trading days = calendar trading days minus vendor gaps
+
+------------------------------------------------------------------------------
+DETAIL
+------------------------------------------------------------------------------
+  Rows not on a trading day          : 0 (required 0)
+  Rows on official holidays          : 0 (required 0)
+  Weekend rows (all special sessions): 1 (of which special: 1)
+  Special-session rows retained      : 34
+  NULL values in OHLC columns        : 0 (required 0)
+  NULL values in planetary columns    : 0 (required 0)
+  NULL values in any column           : 0 (required 0)
+  Duplicate (date, index_name) rows  : 0 (required 0)
+  Forward-fill / back-fill applied   : never (calendar used strictly)
+
+------------------------------------------------------------------------------
+PER-INDEX ROW ACCOUNTING (one row per trading day)
+------------------------------------------------------------------------------
+  NIFTY_50             rows=4696   trading_days=4696   expected=4696   OK (2007-09-17 -> 2026-11-06)
+  NIFTY_BANK           rows=4711   trading_days=4711   expected=4711   OK (2007-09-17 -> 2026-11-06)
+  NIFTY_MIDCAP_100     rows=4711   trading_days=4711   expected=4711   OK (2007-09-17 -> 2026-11-06)
+  NIFTY_MIDCAP_150     rows=5150   trading_days=5150   expected=5150   OK (2005-11-30 -> 2026-11-06)
+  SENSEX               rows=6619   trading_days=6619   expected=6619   OK (2000-01-03 -> 2026-11-06)
+
+------------------------------------------------------------------------------
+MARKET MASTER PROVENANCE
+------------------------------------------------------------------------------
+  built_at                         2026-11-09T22:06:56
+  date_end                         2026-11-06
+  date_start                       2000-01-01
+  indices                          NIFTY_50,NIFTY_BANK,NIFTY_MIDCAP_100,NIFTY_MIDCAP_150,SENSEX
+  provenance                       built offline from the raw CSV cache; no API calls
+  quote_rows                       25887
+  special_sessions_known           26
+  special_sessions_with_data       10
+  trading_days                     6647
+  weekend_sessions_with_data       1
+
+  Master tables:
+    index_metadata                  5 rows
+    market_ohlcv               25,887 rows
+    meta                           10 rows
+    special_sessions               26 rows
+    trading_calendar            9,807 rows
+
+------------------------------------------------------------------------------
+SPECIAL SESSIONS RETAINED (10)
+------------------------------------------------------------------------------
+    2001-11-14  Wednesday
+    2002-11-04  Monday
+    2004-11-12  Friday
+    2017-10-19  Thursday
+    2018-11-07  Wednesday
+    2021-11-04  Thursday
+    2022-10-24  Monday
+    2024-11-01  Friday
+    2025-02-01  Saturday [weekend session]
+    2025-10-21  Tuesday
+
+------------------------------------------------------------------------------
+DOCUMENTED GAPS - trading days with no published bar in any index
+------------------------------------------------------------------------------
+  Left out exactly as specified: a warning is logged and the row is
+  omitted - prices are never forward-filled or invented.
+    2003-10-25  Saturday
+    2005-11-01  Tuesday
+    2006-10-21  Saturday
+    2007-11-09  Friday
+    2008-10-28  Tuesday
+    2009-10-17  Saturday
+    2010-11-05  Friday
+    2011-10-26  Wednesday
+    2012-11-13  Tuesday
+    2013-11-03  Sunday
+    2014-10-23  Thursday
+    2015-11-11  Wednesday
+    2016-10-30  Sunday
+    2019-10-27  Sunday
+    2020-11-14  Saturday
+    2023-11-12  Sunday
+
+------------------------------------------------------------------------------
+ALL WARNINGS (6)
+------------------------------------------------------------------------------
+  - No prior close exists for the first published bar(s) (2007-09-17, 2007-09-17, 2007-09-17, 2005-11-30, 2000-01-03); pct_change set to 0.0 instead of NULL
+  - NIFTY_50: 29 trading day(s) inside its coverage window had no published bar and were left out (never forward-filled): 2007-11-09, 2008-10-28, 2009-10-17, 2010-11-05, 2011-05-31, 2011-07-14, 2011-10-26, 2011-11-24 (+21 more)
+  - NIFTY_BANK: 14 trading day(s) inside its coverage window had no published bar and were left out (never forward-filled): 2007-11-09, 2008-10-28, 2009-10-17, 2010-11-05, 2011-10-26, 2012-11-13, 2013-11-03, 2014-10-23 (+6 more)
+  - NIFTY_MIDCAP_100: 14 trading day(s) inside its coverage window had no published bar and were left out (never forward-filled): 2007-11-09, 2008-10-28, 2009-10-17, 2010-11-05, 2011-10-26, 2012-11-13, 2013-11-03, 2014-10-23 (+6 more)
+  - NIFTY_MIDCAP_150: 22 trading day(s) inside its coverage window had no published bar and were left out (never forward-filled): 2006-01-24, 2006-10-21, 2007-11-09, 2008-10-28, 2009-10-17, 2010-11-05, 2011-10-26, 2012-11-13 (+14 more)
+  - SENSEX: 28 trading day(s) inside its coverage window had no published bar and were left out (never forward-filled): 2003-10-25, 2005-11-01, 2006-10-21, 2007-11-09, 2008-01-01, 2008-10-28, 2009-10-17, 2010-11-05 (+20 more)
+
+==============================================================================
+✓ ALIGNMENT PASSED
+Every row of aligned_master is one real NSE trading session for one index, carrying both index data and the complete planetary snapshot for that exact date. No holiday, no ordinary weekend, no NULL, no forward-filled price, and every special (Muhurat) session retained.
+==============================================================================

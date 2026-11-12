@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------------------
+# Celestial Indices - Python dependencies (core)
+# Python 3.11 - 3.13. pyarrow has Windows wheels; pyswisseph may require
+# Microsoft C++ Build Tools when PyPI has no wheel for the selected Python.
+#
+#   pip install --index-url https://pypi.org/simple -r requirements.txt
+#
+# Everything in this file is required by the pipeline, the Streamlit app and
+# the API.  Optional extras (PostgreSQL driver, legacy live-NSE adapters) live
+# in requirements-optional.txt and are imported by no module in the project.
+# ---------------------------------------------------------------------------
+
+# --- Core data stack -------------------------------------------------------
+pandas>=2.1
+numpy>=1.26
+scipy>=1.11
+pyarrow>=14.0            # parquet engine for data/processed/
+
+# --- Vedic ephemeris ------------------------------------------------------
+pyswisseph>=2.10         # Swiss Ephemeris (Lahiri ayanamsa, sidereal longitudes)
+
+# --- Persistence -----------------------------------------------------------
+SQLAlchemy>=2.0          # ORM, portable SQLite -> PostgreSQL
+
+# --- UI / API --------------------------------------------------------------
+streamlit>=1.44
+plotly>=5.18
+fastapi>=0.110
+uvicorn[standard]>=0.27
+
+# --- Configuration / scheduling -------------------------------------------
+python-dotenv>=1.0
+APScheduler>=3.10
+
+# ---------------------------------------------------------------------------
+# Not required by any module in this project:
+#
+#   pip install --index-url https://pypi.org/simple -r requirements-optional.txt
+#
+#   psycopg2-binary   # only for DATABASE_URL=postgresql+psycopg2://...
+#   jugaad-data       # legacy live-NSE adapter; this build reads a local
+#                      # SQLite market master and never calls the network
+#   requests
+#
+# Note: no tzdata package is needed - all IST conversions use a fixed
+# +05:30 offset (India observes no DST), not the IANA timezone database.
+# ---------------------------------------------------------------------------
